@@ -1,0 +1,285 @@
+.contactUs{
+    position: relative;
+    width: 100%;
+    padding: 40px 100px;
+}
+
+.contactUs .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+.contactUs .title h2{
+    font-weight: 500;
+}
+
+.form{
+    grid-area: form;
+}
+
+.info{
+    grid-area: info;
+}
+
+.map{
+    grid-area: map;
+}
+
+.contact{
+    padding: 40px;
+    box-shadow: 0 5px 35px rgba(0,0,0,0.2);
+}
+
+.box{
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 5fr 4fr;
+    grid-template-areas: "form info" "form map";
+    grid-gap: 20px;
+}
+
+.contact h3{
+    font-weight: 500;
+}
+
+form{
+    position: relative;
+    width: 100%;
+}
+
+.row50{
+    display: flex;
+    gap: 20px;
+}
+.wrapper .inputBox{
+	width: 100%;
+	position: relative;
+	padding: 20px;
+}
+
+.wrapper .inputBox input{
+	width: 100%;
+	background: transparent;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid #2a4995;
+	transition: 0.5s linear;
+}
+
+.wrapper .inputBox input:focus,
+.wrapper .inputBox input:valid{
+	padding: 20px 10px;
+	background: #2a4995;
+	margin-top: 10px;
+}
+
+.wrapper .inputBox label{
+	position: absolute;
+	top:0;
+	left:0;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 20px;
+	transition: 0.2s linear;
+}
+
+.wrapper .inputBox input:focus ~ label,
+.wrapper .inputBox input:valid ~ label{
+	padding: 0;
+}
+
+.wrapper .inputBox textarea{
+	width: 100%;
+    resize: none;
+    height: 300px;
+	font-size: 20px;
+	background: transparent;
+	border: none;
+	outline: none;
+	/*border-bottom: 1px solid rgb(78,131,195);*/
+	border-bottom: 1px solid #2a4995;
+	transition: 0.2s linear;
+}
+
+.wrapper .inputBox textarea:focus,
+.wrapper .inputBox textarea:valid{
+	padding: 20px 10px;
+	margin-top: 10px;
+}
+
+.wrapper .inputBox textarea:focus ~ label,
+.wrapper .inputBox textarea:valid ~ label{
+	padding: 0;
+}
+
+.contact input[type="submit"]{
+	/*background-color: rgb(78,131,195);*/
+	background: #2a4995;
+	color: white;
+	padding: 15px 25px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.info{
+    background: #4e83c3;
+    box-shadow: 0 5px 35px rgba(0,0,0,0.2);
+}
+
+.info h3{
+    color: #fff;
+}
+
+.info .infoBox div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.info .infoBox div span{
+    min-width: 40px;
+    height: 40px;
+    color: #fff;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+    border-radius: 50%;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.info .infoBox div p{
+    color: #fff;
+}
+
+.info .infoBox div a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.sci{
+    margin-top: 40px;
+    display: flex;
+    margin-right: 15px;
+}
+
+.sci a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.sci a i.fa-facebook:hover {
+	border-radius: 2px;
+	line-height: 35px;
+	width: 35px;
+    height: 35px;
+    background-color: #4267B2;
+}
+
+.sci a i.fa-instagram:hover {
+	border-radius: 2px;
+	line-height: 35px;
+	width: 35px;
+    height: 35px;
+    background: radial-gradient(
+		circle at 33% 100%,
+		#fed373 4%,
+		#f15245 30%,
+		#d92e7f 62%,
+		#9b36b7 84%,
+		#515edf
+	);
+}
+
+.sci a i.fa-whatsapp:hover {
+	border-radius: 2px;
+	line-height: 35px;
+	width: 35px;
+    height: 35px;
+	background-color: #25d366;
+}
+
+.info .infoBox p a:hover {
+    color: #2a4995;
+}
+
+.map{
+    padding: 0;
+    box-shadow: 0 5px 35px rgba(0,0,0,0.2);
+}
+
+.map iframe{
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 991px){
+    .contactUs{
+        padding: 20px;
+    }
+
+    .box{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "form" "info" "map";
+    }
+
+    .map{
+        min-height: 300px;
+        padding: 0;
+    }
+
+    .sci a i.fa-facebook {
+        border-radius: 2px;
+        line-height: 35px;
+        width: 35px;
+        height: 35px;
+        background-color: #4267B2;
+    }
+    
+    .sci a i.fa-instagram {
+        border-radius: 2px;
+        line-height: 35px;
+        width: 35px;
+        height: 35px;
+        background: radial-gradient(
+            circle at 33% 100%,
+            #fed373 4%,
+            #f15245 30%,
+            #d92e7f 62%,
+            #9b36b7 84%,
+            #515edf
+        );
+    }
+
+    .sci a i.fa-whatsapp {
+        border-radius: 2px;
+        line-height: 35px;
+        width: 35px;
+        height: 35px;
+        background-color: #25d366;
+    }
+}
+
+@media(max-width: 880px){
+	.contactUs{
+		margin-top:250px;
+	}
+}
